@@ -20,8 +20,6 @@
 
       <v-app-bar-nav-icon @click="drawer = true"></v-app-bar-nav-icon>
 
-      <v-app-bar-title>Title</v-app-bar-title>
-
       <v-spacer></v-spacer>
     </v-app-bar>
 
@@ -29,6 +27,7 @@
       v-model="drawer"
       absolute
       temporary
+     
     >
       <v-list
         nav
@@ -72,10 +71,15 @@
 <script>
   export default {
     name: 'HelloWorld',
-    data: () => ({
-      drawer: false,
-      group: null,
-    }),
+    data() {
+        return{
+           drawer: false,
+           group: null,
+        }
+    },
   }
   
 </script>
+<style scoped>
+
+</style>
